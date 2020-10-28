@@ -20,8 +20,9 @@ sub_metering_3<-as.numeric(sub_data$Sub_metering_3)
 voltage<-as.numeric(sub_data$Voltage)
 reactive<-as.numeric(sub_data$Global_reactive_power)
 
-par(mfrow=c(2,2))
+
 png("plot4.png", width=480, height=480)
+par(mfrow=c(2,2))
 plot(date_time, power, type="l", xlab="", ylab="Global Active Power")
 plot(date_time, voltage, type="l", xlab="datetime", ylab="Voltage")
 plot(date_time, sub_metering_1, type="n", xlab="", ylab="Energy sub metering")
